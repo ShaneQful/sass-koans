@@ -6,7 +6,7 @@
 
 	function getJSON(success, failure) {
 		var request = new XMLHttpRequest();
-		request.open('GET', '/json/meditations.json', true);
+		request.open('GET', 'json/meditations.json', true);
 
 		request.onload = function() {
 			if (request.status >= 200 && request.status < 400) {
