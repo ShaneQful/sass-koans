@@ -1,0 +1,25 @@
+{
+  "name": "sass-koans",
+  "description": "A Sass Learning App based on Koans",
+  "main": "index.html",
+  "authors": [
+    "Shane Quigley"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "koans",
+    "sass"
+  ],
+  "homepage": "https://github.com/ShaneQful/sass-koans",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sass.js": "^0.9.10"
+  }
+}

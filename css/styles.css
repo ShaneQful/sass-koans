@@ -1,0 +1,17 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 16px;
+}
+
+.title {
+  font-size: 26px;
+}
+
+.meditation {
+  font-size: 22px;
+}
+
+.sass, .css {
+  width: 50%;
+  float:left;
+}

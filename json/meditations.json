@@ -1,0 +1,37 @@
+[
+  {
+    "name": "equality",
+    "koans": [
+      {
+        "koan": "We shall contemplate truth by testing reality, via equality",
+        "sass": "@if __ { .reality { display: block; } }",
+        "css": ".reality { display: block; }"
+      },
+      {
+        "koan": "To understand reality, we must compare our expectations against reality",
+        "sass": "@if __ == 1 + 1 { .reality { display: block; } }",
+        "css": ".reality { display: block; }"
+      },
+      {
+        "koan": "You can test equality of many things",
+        "sass": "@if __ + 5 == 7 and 7 == 4 + 3 { .reality { display: block; } }",
+        "css": ".reality { display: block; }"
+      },
+      {
+        "koan": "But you may not string yourself along",
+        "sass": "@if __ == (2 == \"2\") { .reality { display: block; } }",
+        "css": ".reality { display: block; }"
+      },
+      {
+        "koan": "Something is not equal to nothing",
+        "sass": "@if __ == (1 == null) { .reality { display: block; } }",
+        "css": ".reality { display: block; }"
+      },
+      {
+        "koan": "When things cannot be equal, they must be different",
+        "sass": "@if !(\"fill-in-the-blank\" != __) { .reality { display: block; } }",
+        "css": ".reality { display: block; }"
+      }
+    ]
+  }
+]
