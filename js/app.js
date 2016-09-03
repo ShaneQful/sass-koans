@@ -45,7 +45,7 @@
 				document.querySelector('.meditation').innerHTML = meditation.name;
 				document.querySelector('.koan').innerHTML = koan.koan;
 				document.querySelector('.css').innerHTML = koan.css;
-				document.querySelector('.sass').innerHTML = koan.sass.replace('__', '<input class="blank" type="text" autofocus/>');
+				document.querySelector('.sass').innerHTML = koan.sass.replace('__', '<input class="blank" type="text" autofocus="true" />');
 			}
 
 			function attachEvents() {
