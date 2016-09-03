@@ -14,9 +14,11 @@ body {
 }
 
 .sass, .css {
-  width: 50%;
-  float:left;
-  font-family:courier;
+  width: calc(50% - 42px);
+  float: left;
+  font-family: courier;
+  padding: 20px;
+  border-left: 1px solid #D3D4CE;
 }
 
 .blank {
