@@ -1,6 +1,8 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
+  background-color: #A8E1F5;
+  color: #485156;
 }
 
 .title {
@@ -14,4 +16,9 @@ body {
 .sass, .css {
   width: 50%;
   float:left;
+  font-family:courier;
+}
+
+.blank {
+  border: 1px solid #7B8C93;
 }
