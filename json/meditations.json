@@ -1,5 +1,25 @@
 [
   {
+    "name": "variables",
+    "koans": [
+      {
+        "koan": "We shall contemplate truth by testing reality, via variables",
+        "sass": "$element-type: __;\n\n .reality { display: $element-type; }",
+        "css": ".reality { display: block; }"
+      },
+      {
+        "koan": "Variables can colour reality",
+        "sass": "$black-text: __;\n\n .reality {\n\tcolor:$black-text;\n}",
+        "css": ".reality { color: #333; }"
+      },
+      {
+        "koan": "but they can colour more than just reality",
+        "sass": "$white: __;\n\n .reality {\n\tcolor: $white;\n}\n\n.the-matrix {\n\tcolor: $white;\n}",
+        "css": ".reality { color: #FFF; } \n\n.the-matrix {\n\tcolor: #FFF;\n}"
+      }
+    ]
+  },
+  {
     "name": "equality",
     "koans": [
       {
@@ -29,7 +49,7 @@
       },
       {
         "koan": "When things cannot be equal, they must be different",
-        "sass": "@if !(\"fill-in-the-blank\" != __) { .reality { display: block; } }",
+        "sass": "@if \"fill-in-the-blank\" != __ { .reality { display: block; } }",
         "css": ".reality { display: block; }"
       }
     ]

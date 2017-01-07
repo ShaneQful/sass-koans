@@ -44,8 +44,8 @@
 					koan = meditation.koans[state.current.koan];
 				document.querySelector('.meditation').innerHTML = meditation.name;
 				document.querySelector('.koan').innerHTML = koan.koan;
-				document.querySelector('.css').innerHTML = koan.css;
-				document.querySelector('.sass').innerHTML = koan.sass.replace('__', '<input class="blank" type="text" autofocus="true" />');
+				document.querySelector('.css').innerHTML = koan.css.replace(/\n/g, '<br>');
+				document.querySelector('.sass').innerHTML = koan.sass.replace('__', '<input class="blank" type="text" autofocus="true" />').replace(/\n/g, '<br>');
 			}
 
 			function attachEvents() {
@@ -55,18 +55,25 @@
 						koan = meditation.koans[state.current.koan],
 						solution = koan.sass.replace('__', event.target.value);
 					sass.compile(solution, function(result) {
-						if(result.text.replace(/\s/g, '') === koan.css.replace(/\s/g, '')) {
+						if(result.status === 1) {
+							alert(result.message);
+						} else if(result.text == null) {
+							alert('This isn\'t valid sass');
+						} else if(result.text.replace(/\s/g, '') === koan.css.replace(/\s/g, '')) {
 							if(state.current.koan < meditation.koans.length - 1) {
 								state.current.koan += 1;
 							} else {
 								if(state.current.meditation < meditations.length - 1) {
 									state.current.meditation += 1;
+									state.current.koan = 0;
 								} else {
 									alert('Congratulations you\'ve attained sass enlightenment !');
 								}
 							}
 							render();
 							attachEvents();
+						} else {
+							alert('Compiled sass doesn\'t match the css');
 						}
 					});
 				});
